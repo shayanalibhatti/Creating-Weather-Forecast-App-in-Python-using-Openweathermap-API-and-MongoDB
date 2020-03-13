@@ -7,6 +7,7 @@ OpenWeatherMap is an online service that provides current, historical and weathe
 
 I also used MongoDB which is a NoSQL based database for storing data. Pymongo is the library used for interfacing Mongodb with the Python code.
 
+A detailed explanation video of this project can be viewed at https://www.youtube.com/watch?v=8rV9k2tVWWI&t=36s
 ### Tasks To Do:
 
 1. Create account in https://openweathermap.org/api 
@@ -51,3 +52,5 @@ Here is how the data in MongoDB looks like. We get temperature info, weather des
 
 ### Conclusion:
 In this software, I learnt to interface Mongo DB with Openweathermap API to visualize past, present and future weather forecast for analytics. I hope it will be useful to people learning about interfacing Python with Openweathermaps API and MongoDB.
+
+
