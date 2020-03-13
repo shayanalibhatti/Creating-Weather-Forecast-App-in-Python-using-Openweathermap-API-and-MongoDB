@@ -38,15 +38,16 @@ On running the app present in the repository, the 5 day 3 hour apart forecast ge
 
 ### Observations:
 Following image shows data for Karachi for 14th March 3am.
+![Karachi_weather](https://github.com/shayanalibhatti/Weather_forecast_app/blob/master/weather_map.png?raw=true)
 
 Following image shows the latest (5th day) London weather forecast for 18th March 12am
-![](Weather_forecast_app/london_latest_weather.jpg)
+![london_weather](https://github.com/shayanalibhatti/Weather_forecast_app/blob/master/london_latest_weather.jpg?raw=true)
 
 Following image shows the plot of all the weathers for Utah present in database with temperature in Fahrenheit w.r.t date and time.
-![](Weather_forecast_app/utah_weather_forecast_details.jpg)
+![utah_weather](https://github.com/shayanalibhatti/Weather_forecast_app/blob/master/utah_weather_forecast_details.jpg?raw=true)
 
 Here is how the data in MongoDB looks like. We get temperature info, weather description, wind and timestamps.
-![](Weather_forecast_app/mongo_snap.jpg)
+![Mongodb](https://github.com/shayanalibhatti/Weather_forecast_app/blob/master/mongo_snap.jpg?raw=true)
 
 ### Conclusion:
 In this software, I learnt to interface Mongo DB with Openweathermap API to visualize past, present and future weather forecast for analytics. I hope it will be useful to people learning about interfacing Python with Openweathermaps API and MongoDB.
