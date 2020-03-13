@@ -37,7 +37,7 @@ pip install <libraryname>
 On running the app present in the repository, the 5 day 3 hour apart forecast gets stored in MongoDB and we also get to see alerts if the weather forecast contains rainy, snowy or freezing temperatures. It also stores all the temperature maps in a folder. 
 
 ### Observations:
-Following image shows data for Karachi for 14th March 3am.
+Following image shows data for Karachi for 14th March 3am. Click to enlarge the image.
 ![Karachi_weather](https://github.com/shayanalibhatti/Weather_forecast_app/blob/master/weather_map.png?raw=true)
 
 Following image shows the latest (5th day) London weather forecast for 18th March 12am
