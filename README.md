@@ -38,7 +38,6 @@ On running the app present in the repository, the 5 day 3 hour apart forecast ge
 
 ### Observations:
 Following image shows data for Karachi for 14th March 3am.
-<img src = "Weather_forecast_app/weather_map.png"
 
 Following image shows the latest (5th day) London weather forecast for 18th March 12am
 ![](Weather_forecast_app/london_latest_weather.jpg)
