@@ -41,7 +41,7 @@ On running the app present in the repository, the 5 day 3 hour apart forecast ge
 Following image shows data for Karachi for 14th March 3am. Click to enlarge the image.
 ![Karachi_weather](https://github.com/shayanalibhatti/Weather_forecast_app/blob/master/weather_map.png?raw=true)
 
-Following image shows the latest (5th day) London weather forecast for 18th March 12am
+Following image shows the latest (5th day) London weather forecast for 19th March 5pm. If we click on the weather icon, in this case, the clouds, then a Popup shows the temperature.
 ![london_weather](https://github.com/shayanalibhatti/Weather_forecast_app/blob/master/london_latest_weather.jpg?raw=true)
 
 Following image shows the plot of all the weathers for Utah present in database with temperature in Fahrenheit w.r.t date and time.
