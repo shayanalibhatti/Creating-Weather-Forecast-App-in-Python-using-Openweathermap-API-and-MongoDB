@@ -112,6 +112,7 @@ def thread_for_weather_maps(locations):
                        attr="<a href=https://endless-sky.github.io/>Endless Sky</a>")
             weather = str(a["data"]['weather'][0]['description'])
             last_timestamp_date = str(a["data"]['dt_txt'])
+            temperature = str(round(float((a["data"]["main"]["temp"] - 273.15)*(9/5)+32),2))
             # Get the icon that represents weather on that date for that city
             
             icon = a["data"]['weather'][0]['icon']   
@@ -123,14 +124,16 @@ def thread_for_weather_maps(locations):
                                               icon_size=(100, 100),
                                               icon_anchor=(22, 94),
                                               popup_anchor=(-3, -76))
+                                            
+
 
             # Subtracting values just to adjust the marker on Map
-            marker = folium.Marker(location=[location.latitude-0.03, location.longitude-0.12], icon=icon, popup='Mt. Hood Meadows')
-
+            marker = folium.Marker(location=[location.latitude-0.03, location.longitude-0.12], icon=icon, popup="Temperature is "+temperature+"F", html = '<div style="font-size:12pt">%s F</div>'%temperature)
+            popup = folium.Popup(temperature)
 
  #           folium.TileLayer('cartodbpositron').add_to(maps)
             maps.add_child(marker)
-
+            maps.add_child(popup)
             # Adding a legend to the map            
             legend_html =   '''
                     <div style="position: fixed; 
@@ -162,7 +165,7 @@ def thread_for_weather_maps(locations):
 
             # Create and save the map
             maps.get_root().html.add_child(folium.Element(legend_html))        
-            maps.save("C://Users//shaya//Desktop//Weather_map_data//"+city+"_"+last_timestamp_date.replace(":","_")+"_latest_weather.html")
+            maps.save("C://Users//shaya//Desktop//Weather_map_data//"+city+"_"+last_timestamp_date.replace(":","_")+".html")
 
 
 
@@ -183,7 +186,8 @@ def thread_for_latest_weather_map(locations):
         maps = folium.Map(location=[location.latitude, location.longitude],tiles='cartodbdark_matter', zoom_start=8,
                    attr="<a href=https://endless-sky.github.io/>Endless Sky</a>")
         weather = str(cursor[0]["data"]['weather'][0]['description'])
-        last_timestamp_date = str(cursor[0]["data"]['dt_txt'])    
+        last_timestamp_date = str(cursor[0]["data"]['dt_txt'])
+        temperature = str(round(float((cursor[0]["data"]["main"]["temp"] - 273.15)*(9/5)+32),2))
         icon = cursor[0]["data"]['weather'][0]['icon']   
         
         icon_url = "http://openweathermap.org/img/wn/"+icon+"@2x.png"
@@ -194,11 +198,12 @@ def thread_for_latest_weather_map(locations):
                                           popup_anchor=(-3, -76))
 
         # Subtracting values just to adjust the marker
-        marker = folium.Marker(location=[location.latitude-0.03, location.longitude-0.12], icon=icon, popup='Mt. Hood Meadows')
+        #marker = folium.Marker(location=[location.latitude-0.03, location.longitude-0.12], icon=icon, popup="Temperature is "+temperature+"F")
+        marker = folium.Marker(location=[location.latitude-0.03, location.longitude-0.12], icon=icon, popup="Temperature is "+temperature+"F", html = '<div style="font-size:12pt">%s F</div>'%temperature)
 
 #        folium.TileLayer('cartodbdark_matter').add_to(maps)
         maps.add_child(marker)
-        
+        maps.add_child(folium.Popup(temperature))
         legend_html =   '''
                 <div style="position: fixed; 
                             bottom: 100px; left: 50px; width: 120px; height: 90px; 
@@ -222,7 +227,7 @@ def thread_for_latest_weather_map(locations):
                                   <i 
                                       class="icon" style="color:red">
                                   </i>
-                            <br>                              
+                            <br>
                 </div>
                 ''' %(icon_url,weather)
         maps.get_root().html.add_child(folium.Element(legend_html))        
