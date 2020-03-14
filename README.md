@@ -38,6 +38,9 @@ pip install <libraryname>
 On running the app present in the repository, the 5 day 3 hour apart forecast gets stored in MongoDB and we also get to see alerts if the weather forecast contains rainy, snowy or freezing temperatures. It also stores all the temperature maps in a folder. 
 
 ### Observations:
+First, we are presented with the weather alerts in the 5 day forecast. If the weather forecast for designated cities has rain, snow or freezing temperatures (<2 Fahrenheit) then we will get weather alert. It is shown in figure below:
+![weather_alerts] (https://github.com/shayanalibhatti/Weather_forecast_app/blob/master/weather_alerts.jpg?raw=true)
+
 Following image shows data for Karachi for 14th March 3am. Click to enlarge the image.
 ![Karachi_weather](https://github.com/shayanalibhatti/Weather_forecast_app/blob/master/weather_map.png?raw=true)
 
